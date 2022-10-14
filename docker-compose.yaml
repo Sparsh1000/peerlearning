@@ -1,3 +1,15 @@
-version: '3.8'
+version: "3.8"
 services:
-  
+  peerlearning-frontend-main:
+    build: ./peerlearning_frontend-main
+    container_name: peerlearning-frontend-main_c
+    ports:
+     - '3000:3000'
+    stdin_open: true
+    tty: true
+
+  peerlearning-backend-main:
+    build: ./peerlearning-backend-main
+    container_name: peerlearning-backend-main_c
+    ports:
+     - '8000:8000'
